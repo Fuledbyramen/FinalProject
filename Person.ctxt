@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.params=localName\ start\ finish\ type
+comment0.target=Person(java.lang.String,\ int,\ int,\ boolean)
+comment1.params=
+comment1.target=java.lang.String\ getName()
+comment2.params=
+comment2.target=void\ setPregnancy()
+comment3.params=
+comment3.target=boolean\ getPregnancy()
+comment4.params=
+comment4.target=boolean\ getContract()
+comment5.params=
+comment5.target=int\ start()
+comment6.params=
+comment6.target=int\ finish()
+comment7.params=day\ section
+comment7.target=void\ setSection(int,\ int)
+comment8.params=
+comment8.target=int[]\ getHistory()
+numComments=9

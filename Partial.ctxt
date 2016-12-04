@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=first\ second\ bool
+comment0.target=Partial(int,\ int,\ boolean)
+comment1.params=
+comment1.target=int\ start()
+comment2.params=
+comment2.target=int\ finish()
+comment3.params=
+comment3.target=boolean\ fullTime()
+numComments=4
