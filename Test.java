@@ -13,11 +13,14 @@ public class Test
         String[] names = {"Manuel", "Brenda", "John", "Ariana", "Jenn", "Jasmine","Mark", "Jeremy", "Kevin", "Michael", "Jakee", null, null, null};
         String[] hours = {"415p-1115p", "5p-1a", "530p-130a", "6p-2a", "4p-12a", "10a-5p", "630p-230a", "530p-1230a", "330p-1130p", "430p-1230a", "330p-1130p", null, null, null};
         
+        //System.out.println(Helpers.militaryTime("500p-100a").start() + " " + Helpers.militaryTime("5p-1a").finish() + " ");
+        
         Person team[] = Helpers.CreateTeam(names, hours);
         for (Person people : team){
             System.out.println(people.getName() + " " + people.start() + " " + people.finish() + " " + people.getContract());
         }
         
+       
         //output 
         /* 
         Manuel 1615 2315 false

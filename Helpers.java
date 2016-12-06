@@ -14,28 +14,47 @@ public class Helpers
             Pattern p = Pattern.compile("([0-9]+)(a|p)-([0-9]+)(a|p)");
             Matcher m = p.matcher(s);
             m.find();
-            double first = Integer.parseInt(m.group(1)) * Math.pow(10, 5 - m.group(1).length());
-            double second = Integer.parseInt(m.group(3)) * Math.pow(10, 5 - m.group(3).length());
+            double first, second;
+            if (m.group(1).length() == 4){
+                first = Integer.parseInt(m.group(1));
+            }else{
+                first = Integer.parseInt(m.group(1)) * Math.pow(10, 3 - m.group(1).length());
+            }
+            if (m.group(3).length() == 4){
+                second = Integer.parseInt(m.group(3));
+            }else{
+                second = Integer.parseInt(m.group(3)) * Math.pow(10, 3 - m.group(3).length());
+            }
+            
             boolean type;
             if (m.group(2).equals("p")){
-                first = (Integer.parseInt(m.group(1)) + 1200);
+                first = (first + 1200);
             }else if (m.group(2).equals("a")){
-                first = (Integer.parseInt(m.group(1)));
+                first = (first);
             }else{
                 System.out.println("Not p or a");
             }
             if (m.group(4).equals("p")){
-                second = (Integer.parseInt(m.group(3)) + 1200);
+                second = (second + 1200);
             }else if (m.group(4).equals("a")){
-                second = (Integer.parseInt(m.group(1)));
+                second = (second);
             }else{
                 System.out.println("Not p or a");
             }
-            if (second - first == 800){
-                type = true;
+            if (first > second){
+                if (second - first == 800){
+                    type = true;
+                }else{
+                    type = false;
+                }
             }else{
-                type = false;
+                if (first - second == 800){
+                    type = true;
+                }else{
+                    type = false;
+                }
             }
+            
             Partial out = new Partial((int)(first), (int)(second), type);
             return out;
     }
