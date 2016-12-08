@@ -5,7 +5,6 @@ import java.util.regex.*;
 public class Person
 {
     private String name;
-    private boolean pregnant = false;
     private boolean fullTime;
     private int[] starts = new int[7];
     private int[] finishes = new int[7];
@@ -23,12 +22,6 @@ public class Person
     }
     public String getName(){
         return name;
-    }
-    public void setPregnancy(){
-        pregnant = true;
-    }
-    public boolean getPregnancy(){
-        return pregnant;
     }
     public boolean getContract(){
         return fullTime;

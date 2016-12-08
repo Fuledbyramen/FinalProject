@@ -103,18 +103,28 @@ public class Helpers
         return people;
     }
     
-    public static void setHours(Person team[], String[] hours, int day){
+    public static void setHours(Person people[], String[] team, String[] hours, int day){
         int i = 0;
-        for (Person person : team){
+        
+        Person workingTeam[] = new Person[hours.length];
+        
+        int iter = 0;
+        for (String name : team){
+           for (Person person : people){
+               if (person.getName().equals(name)){
+                   workingTeam[iter] = person;
+                   iter += 1;
+                }
+            }
+        }
+        
+        for (Person person : workingTeam){
             Partial partial = militaryTime(hours[i], day);
             person.setStart(day, partial.start());
             person.setFinish(day, partial.finish());
-
-            if (day == 0){
-                person.setType(partial.fullTime());
-            }
-            i+=1;
+            person.setType(partial.fullTime());
         }
+        i+=1;
     }
         
     public static void AssignSections (String[] team, Person people[], int day){
