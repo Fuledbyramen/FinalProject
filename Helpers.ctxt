@@ -1,6 +1,16 @@
 #BlueJ class context
-comment0.params=s
-comment0.target=Partial\ militaryTime(java.lang.String)
-comment1.params=names\ hours
-comment1.target=Person[]\ CreateTeam(java.lang.String[],\ java.lang.String[])
-numComments=2
+comment0.params=s\ day
+comment0.target=Partial\ militaryTime(java.lang.String,\ int)
+comment1.params=names
+comment1.target=Person[]\ CreateTeam(java.lang.String[])
+comment2.params=team\ hours\ day
+comment2.target=void\ setHours(Person[],\ java.lang.String[],\ int)
+comment3.params=team\ people\ day
+comment3.target=void\ AssignSections(java.lang.String[],\ Person[],\ int)
+comment4.params=section
+comment4.target=int[]\ convertSection(java.lang.String)
+comment5.params=team\ day
+comment5.target=void\ setBreaks(Person[],\ int)
+comment6.params=value
+comment6.target=int\ refactor(int)
+numComments=7
